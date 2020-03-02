@@ -27,7 +27,9 @@ public class NfcBlockerModule extends ReactContextBaseJavaModule {
         final Activity activity = getCurrentActivity();
 
         NfcAdapter adapter = NfcAdapter.getDefaultAdapter(activity);
-        adapter.enableReaderMode(activity, null, NfcAdapter.STATE_OFF, null);
+        if (adapter != null) {
+            adapter.enableReaderMode(activity, null, NfcAdapter.STATE_OFF, null);
+        }
     }
     
     @ReactMethod
@@ -35,7 +37,10 @@ public class NfcBlockerModule extends ReactContextBaseJavaModule {
         final Activity activity = getCurrentActivity();
 
         NfcAdapter adapter = NfcAdapter.getDefaultAdapter(activity);
-        adapter.disableReaderMode(activity);
+
+        if (adapter != null) {
+            adapter.disableReaderMode(activity);
+        }
     }
 }
 
