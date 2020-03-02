@@ -1,7 +1,7 @@
 {
   "name": "react-native-nfc-blocker",
   "title": "React Native Nfc Blocker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This module is for disabling NFC reader on android in react-native projects",
   "main": "index.js",
   "scripts": {
